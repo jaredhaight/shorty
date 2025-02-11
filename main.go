@@ -29,7 +29,7 @@ func home(w http.ResponseWriter, r *http.Request) {
 		http.NotFound(w, r)
 	} else {
 		slog.Info("Redirecting")
-		http.Redirect(w, r, urlResult, http.StatusMovedPermanently)
+		http.Redirect(w, r, urlResult, http.StatusFound)
 	}
 
 }
